@@ -14,7 +14,7 @@ void iniciar(int mtz[3][5], int i, int j){
 int n1,n2;
 
 void reservarAssento(int mtz[3][5]){
-	mtz[n1 - 1][n2 - 2] = 1;
+	mtz[n1 - 1][n2 - 1] = 1;
 }
 
 int main(){
