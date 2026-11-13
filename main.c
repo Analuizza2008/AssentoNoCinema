@@ -14,7 +14,7 @@ void iniciar(int mtz[3][5], int i, int j){
 int n1,n2;
 
 void reservarAssento(int mtz[3][5]){
-	mtz[n1][n2] = 1;
+	mtz[n1 - 1][n2 - 2] = 1;
 }
 
 int main(){
@@ -33,7 +33,13 @@ int main(){
 		case 2:
 			printf("\nSelecione o assento desejado [linha,coluna]: ");
 			scanf("%d,%d",&n1,&n2);
-			if(mtz[n1][n2] == 0)
+			if (n1 < 1 || n1 > 3 || n2 < 1 || n2 > 5)
+			{
+				printf("Assento inválido!");
+				break;
+			}
+			
+			if(mtz[n1 - 1][n2 - 1] == 0)
 				reservarAssento(mtz);
 			else
 				printf("Assento já reservado!");
