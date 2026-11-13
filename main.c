@@ -49,7 +49,6 @@ int main(){
 					printf("%d ", i+1);
 					for(j = 0; j<5; j++){
 						printf("[%d]", mtz[i][j]);
-						
 					} printf("\n");
 				}
 		
@@ -71,8 +70,6 @@ int main(){
 		case 3:
 			break;
 		case 4:
-			break;
-		case 0:
 			break;
 		default:
 			break;
