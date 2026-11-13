@@ -26,8 +26,8 @@ int main(){
 
 	printf("=== Menu === \n1 - Mostrar mapa de assentos \n2 - Reservar assento \n3 - Cancelar reserva \n4 - Mostrar resumo das sessoes \n0 - Encerrar\nSELECIONE SUA OPCAO: ");
 	scanf("%d", &opc);
-	
-	switch(opc){
+	do{
+		switch(opc){
 		case 1:			
 			break;
 		case 2:
@@ -35,14 +35,14 @@ int main(){
 			scanf("%d,%d",&n1,&n2);
 			if (n1 < 1 || n1 > 3 || n2 < 1 || n2 > 5)
 			{
-				printf("Assento inválido!");
+				printf("Assento invalido!");
 				break;
 			}
 			
 			if(mtz[n1 - 1][n2 - 1] == 0)
 				reservarAssento(mtz);
 			else
-				printf("Assento já reservado!");
+				printf("Assento ja reservado!");
 			break;
 		case 3:
 			break;
@@ -54,5 +54,6 @@ int main(){
 			break;
 		
 	}
+	}while(opc!=0);
 	
 }
