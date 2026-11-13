@@ -16,17 +16,25 @@ int main(){
 	int mtz[3][5];
 	float vlr[3]; 
 	
-	for(i=0; i<3; i++){
-		do{
-			printf("Digite o valor do ingresso da sessao %d: ", i+1);
-			scanf("%f", &vlr[i]);
-		}while(vlr[i]<=0);
-	}
-	
 	iniciar(mtz[3][5], i, j);
 	
+	printf("   1  2  3  4  5\n");
+	for(i = 0; i<3; i++){
+		printf("%d ", i+1);
+		for(j = 0; j<5; j++){
+			mtz[i][j] = 0;
+			printf("[%d]", mtz[i][j]);
+		}
+		printf("\n");
+	}
+
+	
+	
+	printf("=== Menu === \n1 - Mostrar mapa de assentos \n2 - Reservar assento \n3 - Cancelar reserva \n4 - Mostrar resumo das sessões \n0 - Encerrar: ");
+	scanf("%d", &opc);
+	
 	switch(opc){
-		case 1:
+		case 1:			
 			break;
 		case 2:
 			break;
