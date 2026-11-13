@@ -48,11 +48,8 @@ int main(){
 				for(i = 0; i<3; i++){
 					printf("%d ", i+1);
 					for(j = 0; j<5; j++){
-						if(mtz[n1][n2] == 0){
-							printf("[%d]", mtz[i][j]);
-						}else{
-							printf("[%d]", mtz[i][j]);
-						}
+						printf("[%d]", mtz[i][j]);
+						
 					} printf("\n");
 				}
 		
