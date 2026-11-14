@@ -19,6 +19,10 @@ void reservarAssento(int mtz[3][5]){
 	mtz[n1 - 1][n2 - 1] = 1;
 }
 
+void cancelarAssento(int mtz[3][5]){
+	mtz[n1 - 1][n2 - 1] = 0;
+}
+
 int main(){
 	setlocale(LC_ALL, "");
 	
@@ -42,8 +46,7 @@ int main(){
 		scanf("%d", &opc);
 		
 		switch(opc){
-		case 1:			
-		
+		case 1:				
 			printf("   1  2  3  4  5\n");
 				for(i = 0; i<3; i++){
 					printf("%d ", i+1);
@@ -67,8 +70,22 @@ int main(){
 			else
 				printf("Assento ja reservado!");
 			break;
+			
 		case 3:
+			printf("\nSelecione o assento que deseja cancelar [linha,coluna]: ");
+			scanf("%d,%d",&n1,&n2);
+			if (n1 < 1 || n1 > 3 || n2 < 1 || n2 > 5)
+			{
+				printf("Assento invalido!\n");
+				break;
+			}
+			system("cls");
+			if(mtz[n1 - 1][n2 - 1] == 1)
+				cancelarAssento(mtz);
+			else
+				printf("Assento não reservado!");
 			break;
+			
 		case 4:
 			break;
 		default:
