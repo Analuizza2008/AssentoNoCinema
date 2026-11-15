@@ -29,6 +29,7 @@ int main(){
 	int i, j, opc;
 	int mtz[3][5];
 	float vlr[3]; 
+	int contL = 0;
 	
 	for(i=0; i<3; i++){
 		do{
@@ -87,6 +88,24 @@ int main(){
 			break;
 			
 		case 4:
+			system("cls");
+			printf("=== RESUMO ===");
+			
+			for(i = 0; i < 3; i++)
+			{
+				contL = 0;
+				
+				printf("\n\nSessao %d: \n", i+1);
+				
+				for(j = 0; j < 5; j++)
+				{
+					if(mtz[i][j] == 0)
+					{
+						contL++;
+					}
+				}
+				printf("	Assentos livres: %d \n	Assentos reservados: %d \n	Valor total das reservas: %.2f \n", contL, 5 - contL, (5 - contL) * vlr[i]);
+			}
 			break;
 		default:
 			break;
